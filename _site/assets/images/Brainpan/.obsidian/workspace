@@ -1,0 +1,110 @@
+{
+  "main": {
+    "id": "cb03e01c2a631126",
+    "type": "split",
+    "children": [
+      {
+        "id": "880646af2b2a4fb3",
+        "type": "leaf",
+        "dimension": 65.49912434325744,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "brainpan1.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "5aa174dcba472f64",
+        "type": "leaf",
+        "dimension": 34.50087565674256,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "brainpan1.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f4fa41ddb08fbf0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "242a44a1ff3e0568",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "121c0d107480aa8f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "03402a41685b7f27",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f08739e779075edf",
+    "type": "split",
+    "children": [
+      {
+        "id": "ad26fe2af781eccb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d44d89796de19d22",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "brainpan1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 100,
+    "collapsed": true
+  },
+  "active": "5aa174dcba472f64",
+  "lastOpenFiles": [
+    "brainpan1.md",
+    "img/4.png",
+    "img/3.png",
+    "img/2.png",
+    "img/1.png"
+  ]
+}

