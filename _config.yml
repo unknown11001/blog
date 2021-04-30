@@ -150,10 +150,7 @@ exclude:
   - LICENSE
   - gulpfile.js
   - node_modules
-  - '*.json'
-  - _site/*
-  - _site
-  - _draft
+  - '*.json' 
 
 jekyll-archives:
   enabled: [categories, tags]
