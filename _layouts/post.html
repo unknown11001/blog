@@ -45,14 +45,14 @@ layout: default
       <div class="post-content">
 
         {% if page.image.src %}
-          <img src="{{ page.image.src }}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
+          <img src="{{page.image.src}}" class="preview-img" alt="{{ page.image.alt | default: "Preview Image" }}">
         {% endif %}
 
         {{ content }}
         <br>
         <p>I would like to say thankyou for read my <b>write up</b>, if you enjoy this <b>write up</b> you can support me with click button below to Get my-OSCP-cert.</p>
         <p>Thankyou!</p>
-        <a href="https://buymeacoffe.com/unknown1010"><img src="/assets/images/red-button.png" alt="" style="width: 250px;"></a>
+        <a href="https://buymeacoffe.com/unknown1010"><img src="{{site.baseurl}}/assets/images/red-button.png" alt="" style="width: 250px;"></a>
       </div>
 
       <div class="post-tail-wrapper text-muted">

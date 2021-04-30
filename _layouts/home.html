@@ -47,8 +47,7 @@ layout: page
     <h1>
       <a href="{{ post.url | relative_url }}">{{ post.title }}
         <br><br>
-      <img class="card-img-top" src="{{ post.imageid }}" alt="post image" style="width: 600px;">
-
+      <img class="card-img-top" src="{{ post.imageid | relative_url }}" alt="post image" style="width: 600px;">
       </a>
     </h1>
 
