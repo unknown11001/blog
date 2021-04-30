@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://unknown11001.github.io//sitemap.xml
+Sitemap: https://unknown11001.github.io//blog/sitemap.xml
