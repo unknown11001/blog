@@ -18,27 +18,29 @@
 
   
 
+    
+
+    
+
+  
+
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="About" />
+<meta property="og:title" content="Unknown101.io" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Note: Add Markdown syntax content to file 1 _tabs/about.md and it will show up on this page." />
-<meta property="og:description" content="Note: Add Markdown syntax content to file 1 _tabs/about.md and it will show up on this page." />
-<link rel="canonical" href="https://unknown11001.github.io/blog/about/" />
-<meta property="og:url" content="https://unknown11001.github.io/blog/about/" />
+<link rel="canonical" href="https://unknown11001.github.io/blog/index.html.bak" />
+<meta property="og:url" content="https://unknown11001.github.io/blog/index.html.bak" />
 <meta property="og:site_name" content="Unknown101.io" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-30T17:08:04+07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About" />
+<meta property="twitter:title" content="Unknown101.io" />
 <meta name="twitter:site" content="@ryanapriyudan" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"https://unknown11001.github.io/blog/about/","headline":"About","dateModified":"2021-04-30T17:08:04+07:00","datePublished":"2021-04-30T17:08:04+07:00","sameAs":["https://twitter.com/username","https://github.com/username","https://www.linkedin.com/in/username"],"name":"Unknown101.io","description":"Note: Add Markdown syntax content to file 1 _tabs/about.md and it will show up on this page.","@context":"https://schema.org"}</script>
+{"@type":"WebPage","url":"https://unknown11001.github.io/blog/index.html.bak","headline":"Unknown101.io","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>About | Unknown101.io
+  <title>Unknown101.io
   </title>
 
   <!--
@@ -113,11 +115,13 @@
 -->
 
 
+  
 
 
 
 
-<script defer src="/blog/assets/js/dist/page.min.js"></script>
+
+<script defer src="/blog/assets/js/dist/home.min.js"></script>
 
 
 
@@ -153,7 +157,7 @@
 
   <ul class="w-100">
     <!-- home -->
-    <li class="nav-item">
+    <li class="nav-item active">
       <a href="/blog/" class="nav-link">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
         <span>HOME</span>
@@ -189,7 +193,7 @@
       </a>
     </li> <!-- .nav-item -->
     
-    <li class="nav-item active">
+    <li class="nav-item">
       <a href="/blog/about/" class="nav-link">
         <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i>
         <span>ABOUT</span>
@@ -292,7 +296,7 @@
       
 
         
-          <span>About</span>
+          <span></span>
 
         
 
@@ -305,7 +309,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      About
+      Unknown101.io
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -353,15 +357,38 @@
   <div class="col-12 col-lg-11 col-xl-8">
     <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
     
-      <h1 class="dynamic-title">About</h1>
-      <div class="post-content">
-        <blockquote>
-  <p><strong>Note</strong>: Add Markdown syntax content to file <code class="language-plaintext highlighter-rouge"><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>_tabs/about.md
-</pre></td></tr></tbody></table></code> and it will show up on this page.</p>
-</blockquote>
+      
 
-      </div>
+
+
+<!-- Get pinned posts -->
+
+
+
+
+
+
+
+<!-- Get default posts -->
+
+
+
+
+
+
+
+
+
+
+
+<div id="post-list">
+
+
+
+</div> <!-- #post-list -->
+
+
+
     
     </div> <!-- #page -->
   </div><!-- .col-12 -->
