@@ -3,8 +3,6 @@ layout: page
 # The Home page layout
 ---
 
-<link rel="stylesheet" href="/_site/assets/css/style.css">
-
 {% assign pinned = site.posts | where_exp: "item", "item.pin == true"  %}
 {% assign default = site.posts | where_exp: "item", "item.pin != true"  %}
 {% assign posts = "" | split: "" %}
