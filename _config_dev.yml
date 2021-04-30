@@ -1,1 +1,8 @@
+domain: "http://0.0.0.0:4000"
+
 baseurl: ""
+
+sass:
+  style: :expanded
+  line_numbers: true
+  sourcemap: true
