@@ -5,7 +5,7 @@ theme: jekyll-theme-chirpy
 
 # Only if your site type is GitHub Project sites and doesn't have a custom domain,
 # change below value to '/projectname'.
-baseurl: ''
+baseurl: '/blog'
 
 root: /
 
@@ -26,7 +26,7 @@ tagline: TryHackMe, HackTheBox Player  TryHarder! # it will display as the sub-t
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 # url: 'https://unknown11001.github.io'
-url: 'https://unknown11001.netlify.app'
+url: 'https://unknown11001.github.io'
 # repository: unknown11001/unknown11001.github.io
 # github_repo: 
 
