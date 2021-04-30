@@ -7,6 +7,8 @@ theme: jekyll-theme-chirpy
 # change below value to '/projectname'.
 baseurl: ''
 
+root: /
+
 # the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
 lang: en-US
 
@@ -24,8 +26,8 @@ tagline: TryHackMe, HackTheBox Player  TryHarder! # it will display as the sub-t
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 # url: 'https://unknown11001.github.io'
-url: 'https://unknown11001.netlify.app'
-# repository: unknown11001/unknown11001.github.io
+# url: 'https://unknown11001.netlify.app'
+repository: unknown11001/unknown11001.github.io
 # github_repo: 
 
 github:
