@@ -23,8 +23,8 @@ tagline: TryHackMe, HackTheBox Player  TryHarder! # it will display as the sub-t
 
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-# url: 'https://unknown11001/github.io'
-# repository: unknown11001/profile
+url: 'https://unknown11001.github.io'
+repository: unknown11001/unknown11001.github.io
 
 github:
   username: Bunnys666             # change to your github username
