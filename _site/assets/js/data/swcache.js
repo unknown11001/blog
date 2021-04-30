@@ -58,7 +58,7 @@ const allowedDomains = [
     'www.google-analytics.com',
   
 
-  'unknown11001.github.io',
+  'unknown11001.netlify.app',
 
   'fonts.gstatic.com',
   'fonts.googleapis.com',
