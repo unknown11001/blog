@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://unknown11001.github.io//blog/</id>
+  <id>https://unknown11001.github.io/blog/</id>
   <title>Unknown101.io</title>
   <subtitle></subtitle>
-  <updated>2021-04-30T21:50:19+07:00</updated>
+  <updated>2021-05-01T09:51:27+07:00</updated>
   <author>
     <name></name>
-    <uri>https://unknown11001.github.io//blog/</uri>
+    <uri>https://unknown11001.github.io/blog/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://unknown11001.github.io//blog/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://unknown11001.github.io/blog/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en-US"
-    href="https://unknown11001.github.io//blog/"/>
+    href="https://unknown11001.github.io/blog/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
   <rights> © 2021  </rights>
   <icon>/blog/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>Hack The Box - Academy</title>
-    <link href="https://unknown11001.github.io//blog/posts/academy/" rel="alternate" type="text/html" title="Hack The Box - Academy" />
+    <link href="https://unknown11001.github.io/blog/posts/academy/" rel="alternate" type="text/html" title="Hack The Box - Academy" />
     <published>2021-04-21T00:00:00+07:00</published>
   
     <updated>2021-04-30T11:32:14+07:00</updated>
   
-    <id>https://unknown11001.github.io//blog/posts/academy/</id>
-    <content src="https://unknown11001.github.io//blog/posts/academy/" />
+    <id>https://unknown11001.github.io/blog/posts/academy/</id>
+    <content src="https://unknown11001.github.io/blog/posts/academy/" />
     <author>
       <name></name>
     </author>
